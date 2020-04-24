@@ -1,0 +1,34 @@
+
+body {
+
+}
+.place {
+  text-align: center;
+}
+
+button {
+  border:none;
+  background-color: white;
+}
+
+button:focus {
+  outline:0;
+}
+
+
+#submit {
+  height: 270px;
+  width: 270px;
+}
+
+.my-container {
+  border: 1px solid green;
+}
+
+.my-row {
+  border: 3px solid red;
+}
+
+.my-col {
+  border: 3px dotted blue;
+}

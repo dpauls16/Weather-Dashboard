@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--Imports Jquery-->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--Adds the use of animations on the website-->
+    <script src="lottie.js"></script>
+
+    <script src="dashboard.js"></script>
+
+    <!--Adds the ability to use carousels on the web page.-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+
+
+<body onload="loadPage()">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4 text-center">
+                <h1>Todays Weather</h1>
+            </div>
+             <div class="col-4 text-right">
+            </div>
+        </div>
+
+        <div class="row my-row mx-0 top-buffer">
+            <div class="col-12">
+
+                <!-- Adds a new Swiper carousel-->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Creates a new swiper slide with a boot strap card that can add new slides to the swiper carousel-->
+                        <div class="swiper-slide" id="submit-button-slide">
+                                <div class="card" style="width: 18rem">
+                                    <h1 class="card-title place">Enter city</h1>
+                                    <form id="add-place-form">
+                                        <!--Creates a place for a lottie animation to go. Once this element is clicked
+                                        the animation will play and add a new card to the screen-->
+                                        <div id="add_item" onclick="setUpRequest()"></div>
+
+                                        <!--Adds a text box where city's can be put in-->
+                                        <div class="form-group">
+                                                <input class="form-control" id="myInput" placeholder="Enter city by City,Country or Lat,Lon">
+                                         </div>
+                                    </form>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adds arrows to swiper carousel-->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

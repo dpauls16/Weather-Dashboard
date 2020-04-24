@@ -1,0 +1,61 @@
+
+
+/*Customizes delete button*/
+.delete {
+  border:none;
+  background-color: white;
+  color: black;
+  float:right;
+  height: 35px;
+  width: 35px;
+}
+
+/* Changes currsor when you hover over the delete button*/
+.delete:hover {
+  cursor: pointer;
+}
+
+/* Changes currsor when you hover over the add item + button */
+#add_item:hover {
+  cursor: pointer;
+}
+
+/* Formats the add city forum box. */
+.form-control {
+  /* adds green border and box shadow around the item */
+  border-color: limegreen;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 255, 0, 0.6);
+
+  /*Positons the button in the right spot */
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.form-control:focus {
+  border-color: limegreen;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 255, 0, 0.6);
+}
+
+.top-buffer { margin-top:50px; }
+
+/* Customizes the items in the swiper */
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slides */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
