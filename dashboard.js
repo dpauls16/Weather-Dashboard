@@ -1,4 +1,6 @@
 function loadPage() {
+
+
     slideNum = 0;
 
     // Creates the swiper carousel
@@ -236,3 +238,4 @@ function addCard(data) {
         path: weatherGif // the path to the animation json
     });
 }
+

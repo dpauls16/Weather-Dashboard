@@ -7,9 +7,11 @@
     <!--Imports Jquery-->
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
     <!--Adds the use of animations on the website-->
     <script src="lottie.js"></script>
+
 
     <script src="dashboard.js"></script>
 
@@ -24,14 +26,39 @@
 
 <body onload="loadPage()">
 
+
+<!-- Modal for help-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">How to</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                To insert a city please enter it like City, Country Code. You can also do City, State. For example Newberg, USA. For example Newberg, Oregon. For Latitude and Longitude please enter it like this 45.300331, -122.979156. When entering data there has to be a , or it will not work.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-4">
+
             </div>
             <div class="col-4 text-center">
                 <h1>Todays Weather</h1>
             </div>
              <div class="col-4 text-right">
+                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="help" onclick="test()">
+                     How to
+                 </button>
             </div>
         </div>
 
@@ -45,7 +72,7 @@
                         <div class="swiper-slide" id="submit-button-slide">
                                 <div class="card" style="width: 18rem">
                                     <h1 class="card-title place">Enter city</h1>
-                                    <form id="add-place-form">
+                                    <form id="add-place-form" onsubmit="setUpRequest(); return false">
                                         <!--Creates a place for a lottie animation to go. Once this element is clicked
                                         the animation will play and add a new card to the screen-->
                                         <div id="add_item" onclick="setUpRequest()"></div>
@@ -63,8 +90,20 @@
                 <!-- Adds arrows to swiper carousel-->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+
             </div>
         </div>
     </div>
-</body>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+<!--modal-->
+<script>
+    function test  () {
+        $("#myModal").modal();
+    }
+</script>
+
+
+    </body>
 </html>

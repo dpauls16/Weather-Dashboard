@@ -28,7 +28,12 @@
 
   /*Positons the button in the right spot */
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 55px;
+}
+
+/* Formats help button */
+#help {
+  margin-top: 10px;
 }
 
 .form-control:focus {
